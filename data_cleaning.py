@@ -8,10 +8,12 @@ print("原始數據：")
 print(df)
 
 #將沒有名字的單元格填充為”無民氏“
-df['名字'].fillna("無名氏", inplace=True)
+#df['名字'].fillna("無名氏", inplace=True)  #此寫法在pandas 3.0中改變，從df[col].method(value, inplace=True)改為df.method({col:value}, inplace=True)
+df.fillna({'名字':'無名氏'}, inplace=True)
 
 #將學籍總成績為空的單元格填充為60
-df['學籍總成績'].fillna(60, inplace=True)
+#df['學籍總成績'].fillna(60, inplace=True)  #同上
+df.fillna({'學籍總成績':60}, inplace=True)
 
 #刪除重複行
 df_cleaned = df.drop_duplicates()
