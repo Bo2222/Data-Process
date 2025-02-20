@@ -1,7 +1,8 @@
 import pandas as pd
 
 #讀取已處理過的Excel文件
-df = pd.read_excel("cleaned_example.xlsx")    #確保cleaned_example.xlsx在當前工作目錄中
+df = pd.read_excel("Data Processing/cleaned_example.xlsx")    #確保cleaned_example.xlsx在當前工作目錄中
+#檔案路徑要因應資料夾的新增而做改變
 
 #新增班級成員
 new_student = pd.DataFrame({

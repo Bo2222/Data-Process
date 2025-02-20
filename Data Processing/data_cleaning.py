@@ -1,7 +1,8 @@
 import pandas as pd
 
 #讀取Excel文件
-df = pd.read_excel('example.xlsx')      #確保example.xlsx在當前工作目錄中
+df = pd.read_excel('Data Processing/example.xlsx')      #確保example.xlsx在當前工作目錄中
+#檔案路徑要因應資料夾的新增而做改變
 
 #讀取原始數據
 print("原始數據：")
@@ -23,4 +24,5 @@ print("\n清理後的數據：")
 print(df_cleaned)
 
 #將清理後的數據保存到新的Excel文件
-df_cleaned.to_excel('cleaned_example.xlsx', index=False)
+df_cleaned.to_excel('Data Processing/cleaned_example.xlsx', index=False)
+#檔案路徑要因應資料夾的新增而做改變
